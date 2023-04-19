@@ -1,3 +1,5 @@
+package threadCreation;
+
 import java.lang.Thread.UncaughtExceptionHandler;
 
 public class Main2 {
