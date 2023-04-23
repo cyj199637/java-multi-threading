@@ -1,4 +1,4 @@
-package threadCordination;
+package threadCoordination;
 
 /**
  <스레드를 종료해야 하는 이유>
