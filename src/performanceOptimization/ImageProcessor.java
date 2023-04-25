@@ -1,28 +1,8 @@
 package performanceOptimization;
 
-import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
-public class ImageProcessing {
-    public static final String SOURCE_FILE = "./resources/many-flowers.jpg";
-    public static final String DESTINATION_FILE = "./out/many-flowers.jpg";
-
-    public static void main(String[] args) throws IOException {
-
-        BufferedImage original = ImageIO.read(new File(SOURCE_FILE));
-        BufferedImage result = new BufferedImage(original.getWidth(), original.getHeight(), BufferedImage.TYPE_INT_RGB);
-
-        recolorSingleThreaded(original, result);
-
-        File output = new File(DESTINATION_FILE);
-        ImageIO.write(result, "jpg", output);
-    }
-
-    public static void recolorSingleThreaded(BufferedImage original, BufferedImage result) {
-        recolorImage(original, result, 0, 0, original.getWidth(), original.getHeight());
-    }
+public class ImageProcessor {
 
     // recolorImage : 이미지의 전체 픽셀에 대해서 회색 -> 보라색 으로 변경(왼쪽 상단부터 변경)
     public static void recolorImage(BufferedImage original, BufferedImage result, int leftCorner, int topCorner, int width, int height) {
