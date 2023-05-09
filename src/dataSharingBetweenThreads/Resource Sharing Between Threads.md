@@ -36,3 +36,7 @@
 (feat. RaceCondition.class 예제)
 
 ![img.png](../image/img-003.png)
+
+- 문제 원인
+  - `i++` / `i--` 연산은 원자적 연산이 아니다.
+  - 두 개의 스레드가 하나의 `InventoryCounter` 를 공유하고, 두 스레드 모두 `InventoryCounter` 를 읽고 수정할 수 있다.

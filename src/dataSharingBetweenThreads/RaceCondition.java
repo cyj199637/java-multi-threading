@@ -54,15 +54,15 @@ public class RaceCondition {
     private static class InventoryCounter {
         private int items = 0;
 
-        public void increase() {
+        public synchronized void increase() {
             items++;
         }
 
-        public void decrease() {
+        public synchronized void decrease() {
             items--;
         }
 
-        public int getItems() {
+        public synchronized int getItems() {
             return items;
         }
     }
